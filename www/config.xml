@@ -7,11 +7,15 @@
     <author email="info@gpchannel.com" href="http://www.gpchannel.com">
         Global Product Channel
     </author>
+		
+		<preference name="android-build-tool" value="ant" />
+		
 	<gap:plugin name="com.sharinglabs.cordova.plugin.cache"  />
     <gap:plugin name="org.apache.cordova.device" />
 	<gap:plugin name="org.apache.cordova.network-information" />
 	<gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
- 	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1"/>
+<!--  	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1"/> -->
+<gap:plugin name="phonegap-plugin-push" source="npm" />
 	<gap:plugin name="org.apache.cordova.core.vibration" />
 	<gap:plugin name="org.apache.cordova.core.dialogs" />
 	<gap:plugin name="com.adobe.plugins.gaplugin" />
