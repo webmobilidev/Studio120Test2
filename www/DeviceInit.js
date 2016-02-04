@@ -133,7 +133,7 @@ function DeviceInitializator() {
       if (device.platform == 'android' || device.platform == 'Android' || device.platform == 'amazon-fireos')
         pushNotification.register(successHandler, errorHandler, { "senderID": appID, "ecb": "pushManager.onNotification" });		// required!
       else
-        pushNotification.register(tokenHandler, errorHandler, { "badge": "true", "sound": "true", "alert": "true", "ecb": "window.onNotificationAPN" });	// required!
+        pushNotification.register(tokenHandler, errorHandler, { "badge": "true", "sound": "true", "alert": "true", "ecb": "pushManager.onNotificationAPN" });	// required!
     }
 
     /** Istanza di TP_MobileEngine */
