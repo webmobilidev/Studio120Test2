@@ -12,7 +12,7 @@
 	<gap:plugin name="org.apache.cordova.device" />
 	<gap:plugin name="org.apache.cordova.network-information" />
 	<gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
-	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1"/>	
+	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4"/>	
 	<gap:plugin name="org.apache.cordova.core.vibration" />
 	<gap:plugin name="org.apache.cordova.core.dialogs" />
 	<gap:plugin name="com.adobe.plugins.gaplugin" />
@@ -45,7 +45,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-    <preference name='phonegap-version' value='cli-5.1.1' />
+    <preference name='phonegap-version' />
 	<gap:config-file platform="ios" parent="UIStatusBarHidden">
 		<true/>
 	</gap:config-file>
