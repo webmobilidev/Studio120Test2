@@ -12,7 +12,7 @@
 	<gap:plugin name="org.apache.cordova.device" />
 	<gap:plugin name="org.apache.cordova.network-information" />
 	<gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
-	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4"/>	
+	<gap:plugin name="com.phonegap.plugins.pushplugin"/>	
 	<gap:plugin name="org.apache.cordova.core.vibration" />
 	<gap:plugin name="org.apache.cordova.core.dialogs" />
 	<gap:plugin name="com.adobe.plugins.gaplugin" />
