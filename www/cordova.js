@@ -19,7 +19,7 @@
  under the License.
 */
 ;(function() {
-var CORDOVA_JS_BUILD_LABEL = '2.9.0-0-g83dc4bd';
+//var CORDOVA_JS_BUILD_LABEL = '2.9.0-0-g83dc4bd';
 // file: lib/scripts/require.js
 
 var require,
