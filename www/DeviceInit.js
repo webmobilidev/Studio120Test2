@@ -81,7 +81,7 @@ function DeviceInitializator() {
 
       // se lo script cordova.js e' incluso
       if (typeof Connection !== 'undefined') {
-        if (navigator.connection.type == Connection.NONE)
+        if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN)
           location.href = "no_connection.html";
       }
 
@@ -95,6 +95,18 @@ function DeviceInitializator() {
       //states[Connection.CELL] = 'Cell generic connection';
       //states[Connection.NONE] = 'No network connection';
     }
+	
+	//Plugin per clear cache
+	var success = function(status) {
+            console.log('Message: ' + status);
+        }
+
+	var error = function(status) {
+            console.log('Error: ' + status);
+        }
+
+	window.cache.clear( success, error );
+	
   }
 
 
