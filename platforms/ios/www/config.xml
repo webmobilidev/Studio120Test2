@@ -21,13 +21,11 @@
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
-    
     <platform name="android">
-      <preference name="android-minSdkVersion" value="19"/>
+        <preference name="android-minSdkVersion" value="19" />
     </platform>
-    <platform name="ios"/>
-
-    <preference name="android-minSdkVersion" value="19"/>
+    <platform name="ios" />
+    <preference name="android-minSdkVersion" value="19" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
@@ -69,8 +67,8 @@
     <icon gap:platform="ios" height="512" src="res/icons/ios/icon-512.png" width="512" />
     <icon gap:platform="ios" height="1024" src="res/icons/ios/icon-1024.png" width="1024" />
     <icon gap:platform="webos" src="res/icons/webos/icon-64.png" />
-    <icon gap:platform="winphone" src="res/icons/windows-phone/icon-62.png" />
-    <icon gap:platform="winphone" gap:role="background" src="res/icons/windows-phone/icon-173.png" />
+    <icon gap:platform="windows-phone" src="res/icons/windows-phone/icon-62.png" />
+    <icon gap:platform="windows-phone" gap:role="background" src="res/icons/windows-phone/icon-173.png" />
     <gap:splash gap:density="ldpi" gap:platform="android" src="res/screen/android/screen-ldpi-portrait.png" />
     <gap:splash gap:density="mdpi" gap:platform="android" src="res/screen/android/screen-mdpi-portrait.png" />
     <gap:splash gap:density="hdpi" gap:platform="android" src="res/screen/android/screen-hdpi-portrait.png" />
@@ -85,11 +83,12 @@
     <gap:splash gap:platform="ios" height="783" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="ios" height="2008" src="res/screen/ios/screen-ipad-portrait-2x.png" width="1536" />
     <gap:splash gap:platform="ios" height="1536" src="res/screen/ios/screen-ipad-landscape-2x.png" width="2008" />
-    <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
+    <gap:splash gap:platform="windows-phone" src="res/screen/windows-phone/screen-portrait.jpg" />
+    <engine name="ios" spec="~4.2.1" />
+    <plugin name="org.apache.cordova.plugin.cache" spec="https://github.com/tiltshiftfocus/cordova-plugin-cache.git" />
     <plugin name="cordova-plugin-network-information" spec="~1.2.1" />
     <plugin name="cordova-plugin-dialogs" spec="~1.2.1" />
-    <plugin name="org.apache.cordova.plugin.cache" spec="https://github.com/tiltshiftfocus/cordova-plugin-cache.git" />
-    <plugin name="phonegap-plugin-push">
-        <param name="SENDER_ID" value="686894164102" />
+    <plugin name="phonegap-plugin-push" spec="~1.8.1">
+        <variable name="SENDER_ID" value="686894164102" />
     </plugin>
 </widget>
