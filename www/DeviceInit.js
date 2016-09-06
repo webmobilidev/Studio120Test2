@@ -163,8 +163,7 @@ function DeviceInitializator() {
       });
       
       push.on('registration', function(data) {
-        if (device.platform == 'android' || device.platform == 'Android' || device.platform == 'amazon-fireos')      
-          pushManager.registerAndroidNG(data);
+        pushManager.registerNG(data);
       });
       
       push.on('notification', function(data) {
