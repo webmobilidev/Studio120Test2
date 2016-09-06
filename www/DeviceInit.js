@@ -105,7 +105,7 @@ function DeviceInitializator() {
             console.log('Error: ' + status);
         }
 
-	//window.cache.clear( success, error );
+	window.cache.clear( success, error );
 	
   }
 
