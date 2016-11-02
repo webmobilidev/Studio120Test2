@@ -81,7 +81,7 @@ function DeviceInitializator() {
 
       // se lo script cordova.js e' incluso
       if (typeof Connection !== 'undefined') {
-        if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN)
+        if (navigator.connection.type == Connection.NONE)
           location.href = "no_connection.html";
       }
 
@@ -95,18 +95,6 @@ function DeviceInitializator() {
       //states[Connection.CELL] = 'Cell generic connection';
       //states[Connection.NONE] = 'No network connection';
     }
-	
-	//Plugin per clear cache
-	var success = function(status) {
-            console.log('Message: ' + status);
-        }
-
-	var error = function(status) {
-            console.log('Error: ' + status);
-        }
-
-	//window.cache.clear( success, error );
-	
   }
 
 
@@ -141,43 +129,11 @@ function DeviceInitializator() {
     if (typeof onDevice !== 'undefined') {
       pushManager = new PushManager(tpID, domain);
       var appID = pushManager.getAppID(tpID);
-      /*pushNotification = window.plugins.pushNotification;
+      pushNotification = window.plugins.pushNotification;
       if (device.platform == 'android' || device.platform == 'Android' || device.platform == 'amazon-fireos')
         pushNotification.register(successHandler, errorHandler, { "senderID": appID, "ecb": "pushManager.onNotification" });		// required!
       else
         pushNotification.register(tokenHandler, errorHandler, { "badge": "true", "sound": "true", "alert": "true", "ecb": "pushManager.onNotificationAPN" });	// required!
-      */
-      var push = PushNotification.init({
-        android: {
-            senderID: appID
-        },
-        browser: {
-            pushServiceURL: 'http://push.api.phonegap.com/v1/push'
-        },
-        ios: {
-            alert: "true",
-            badge: "true",
-            sound: "false"
-        },
-        windows: {}
-      });
-      
-      push.on('registration', function(data) {
-        pushManager.registerNG(data);
-      });
-      
-      push.on('notification', function(data) {
-          if (device.platform == 'android' || device.platform == 'Android' || device.platform == 'amazon-fireos')      
-            pushManager.notificationAndroidNG(data)
-          else
-            pushManager.onNotificationAPN(data);
-          // data.message,
-          // data.title,
-          // data.count,
-          // data.sound,
-          // data.image,
-          // data.additionalData
-      });
     }
 
     /** Istanza di TP_MobileEngine */
