@@ -44,7 +44,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-    <preference name="phonegap-version" />
+    <preference name='phonegap-version' value="cli-5.2.0"/>    
     <gap:config-file parent="UIStatusBarHidden" platform="ios">
         <true />
     </gap:config-file>
